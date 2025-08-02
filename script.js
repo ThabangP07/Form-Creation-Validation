@@ -10,5 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
     })
 
-    
+    let isValid = true;
+    let message = [];
+
+    if (username < 3) {
+        isValid = false;
+        message.push('Your name is have more than 3 letters');
+    }
 });
