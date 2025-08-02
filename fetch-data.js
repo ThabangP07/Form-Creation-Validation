@@ -17,6 +17,8 @@ const fetchUserData = async () => {
             userList.appendChild(nameList);
         })
     } catch (error) {
-        console.error(error)
+        dataContainer.innerHTML = '';
+        dataContainer.textContent = 'Failed to load data.';
     }
 }
+
