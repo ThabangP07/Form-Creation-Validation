@@ -6,6 +6,16 @@ const fetchUserData = async () => {
     try {
         const response = await fetch(apiUrl);
         const users = await response.json();
+
+        dataContainer.innerHTML = '';
+
+        const userList = document.createElement('ul');
+
+        users.forEach(user => {
+            const nameList = document.createElement('li');
+            nameList.textContent = user;
+            userList.appendChild(nameList);
+        })
     } catch (error) {
         console.error(error)
     }
