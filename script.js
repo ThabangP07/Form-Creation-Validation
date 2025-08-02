@@ -22,4 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         isValid = false;
         message.push('Your email should include the @ symbol');
     }
+
+    if (password.length < 8) {
+        isValid = false;
+        message.push('Your email should have at least 8 characters');
+    }
 });
