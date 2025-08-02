@@ -11,21 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     let isValid = true;
-    let message = [];
+    let messages = [];
 
     if (username < 3) {
         isValid = false;
-        message.push('Your name is have more than 3 letters');
+        messages.push('Your name is have more than 3 letters');
     }
 
     if (!email.includes('@')) {
         isValid = false;
-        message.push('Your email should include the @ symbol');
+        messages.push('Your email should include the @ symbol');
     }
 
     if (password.length < 8) {
         isValid = false;
-        message.push('Your email should have at least 8 characters');
+        messages.push('Your email should have at least 8 characters');
     }
 
     feedbackDiv.style.display = 'block';
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         feedbackDiv.textContent = 'Registration successful!';
         feedbackDiv.style.color = '#28a745';
     } else {
-        feedbackDiv.innerHTML = message.join('<br>');
+        feedbackDiv.innerHTML = messages.join('<br>');
         backDiv.style.color = '#dc3545';
     }
 });
