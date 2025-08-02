@@ -17,4 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         isValid = false;
         message.push('Your name is have more than 3 letters');
     }
+
+    if (!email.includes('@')) {
+        isValid = false;
+        message.push('Your email should include the @ symbol');
+    }
 });
