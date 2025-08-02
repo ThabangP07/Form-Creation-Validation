@@ -27,4 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
         isValid = false;
         message.push('Your email should have at least 8 characters');
     }
+
+    feedbackDiv.style.display = 'block';
+
+    if (isValid) {
+        feedbackDiv.textContent = 'Registration successful!';
+        feedbackDiv.style.color = '#28a745';
+    } else {
+        feedbackDiv.innerHTML = message.join('<br>');
+        backDiv.style.color = '#dc3545';
+    }
 });
