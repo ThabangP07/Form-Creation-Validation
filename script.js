@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let isValid = true;
     let messages = [];
 
-    if (username < 3) {
+    if (username.length < 3) {
         isValid = false;
         messages.push('Your name is have more than 3 letters');
     }
