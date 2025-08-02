@@ -37,4 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
         feedbackDiv.innerHTML = messages.join('<br>');
         backDiv.style.color = '#dc3545';
     }
+
+    form.submit();
 });
