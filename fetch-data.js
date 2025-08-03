@@ -22,3 +22,4 @@ const fetchUserData = async () => {
     }
 }
 
+document.addEventListener('DOMContentLoaded', fetchUserData());
